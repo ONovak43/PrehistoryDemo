@@ -1,0 +1,47 @@
+@using PrehistoryMethodApp.Data
+@inject DragDropService<Card> DragDrop
+
+@implements IDisposable
+<div class="row">
+    <div class="col-lg text-center">
+        <h1>@State.Headline</h1>
+        <p>
+            @((MarkupString)State.Text)
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm" ondragstart="event.dataTransfer.setData('text', event.target.id);">
+        @foreach (var card in Cards)
+        {
+            <div draggable="true"
+                 class="@GetItemClasses(card)"
+                 @ondragstart="(arg) => OnDragStart(card, arg)"
+                 @ondragend="(arg) => OnDragEnd(card)">
+                <div class="card text-center text-uppercase font-weight-bold justify-content-center align-items-center" style="background-color: @GetBgColor(card, false); width:@GetWidth(card); height:@GetHeight(card)">
+                    @card.FirstWord
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-sm">
+        @foreach (var card in CardsTwo)
+        {
+        <div class="@GetDropItemClasses(card)"
+             @ondragover:preventDefault @ondragover="() => { }"
+             @ondrop="() => OnDrop(card)">
+            @if (card.IsImage)
+            {
+                <img src="images/@card.SecondWord" style="width:@GetWidth(card); height:@GetHeight(card)" class="card card-picture" />
+            }
+            else
+            {
+                <div class="card text-center text-uppercase font-weight-bold"
+                     style="background-color: @GetBgColor(card);width:@GetWidth(card); height:@GetHeight(card)">
+                    @card.SecondWord
+                </div>
+            }
+        </div>
+        }
+    </div>
+</div>  

@@ -1,0 +1,44 @@
+﻿@page "/"
+
+@inject TasksDataService TasksService
+@inject IModalService modal
+@inject IJSRuntime JS
+
+<div class="container" id="main-box">
+    <Dropzone Cards="Cards"
+              DefaultState="@DefaultState"
+              SuccessfulState="@SuccessfulState"
+              FailState="@FailState"              
+              LeftColor="@LeftColor"
+              RightColor="@RightColor">
+    </Dropzone>
+</div>
+
+@code {
+    private List<Card> Cards = new List<Card>();
+    private string LeftColor = "#D89E4F";
+    private string RightColor = "#AF6500";
+
+    private State DefaultState = new State
+    {
+        Headline = "Vítejte na stanovišti číslo jedna!",
+        Text = "Úkolem v tomto stanovišti je spojit pojmy, které k sobě patří. Postupujte ale opatrně! Pokud uděláte <b>JEDNU</b> chybu, záhadu tohoto stanoviště nerozluštíte."
+    };
+    private State SuccessfulState = new State
+    {
+        Headline = "Vyřešili jste záhadu stanoviště. Gratulujeme!",
+        Text = "Zapiště si písmeno <b>U</b> a pokračujte prosím na další stanoviště."
+    };
+    private State FailState = new State
+    {
+        Headline = "Odpověděli jste 2x špatně.",
+        Text = "Záhadu tohoto stanoviště se Vám nepodařilo rozluštit. Pokračujte prosím na další stanoviště."
+    };
+
+
+    protected override void OnInitialized()
+    {
+        var words = TasksDataService.TaskOne;
+        Cards = words.ToList();
+    }
+}

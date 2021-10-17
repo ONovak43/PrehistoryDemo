@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "3HHGD/dMuLgx56zJFRuZovAgr8XX/yJH2LK9fDPMU5YZko7kJj7HYeca/s59DK0DPfbVbCKSK9umKxJunapNYw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\onova\\source\\repos\\PrehistoryMethodApp\\PrehistoryMethodApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\onova\\.nuget\\packages\\blazored.modal\\6.0.1\\blazored.modal.6.0.1.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.6\\microsoft.aspnetcore.authorization.3.1.6.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.6\\microsoft.aspnetcore.components.3.1.6.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\3.1.6\\microsoft.aspnetcore.components.analyzers.3.1.6.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\3.1.6\\microsoft.aspnetcore.components.forms.3.1.6.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.aspnetcore.components.web\\3.1.6\\microsoft.aspnetcore.components.web.3.1.6.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.aspnetcore.metadata\\3.1.6\\microsoft.aspnetcore.metadata.3.1.6.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.6\\microsoft.extensions.dependencyinjection.3.1.6.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.6\\microsoft.extensions.dependencyinjection.abstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.6\\microsoft.extensions.logging.abstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.extensions.options\\3.1.6\\microsoft.extensions.options.3.1.6.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.6\\microsoft.extensions.primitives.3.1.6.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.jsinterop\\3.1.6\\microsoft.jsinterop.3.1.6.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.jsinterop.webassembly\\3.2.1\\microsoft.jsinterop.webassembly.3.2.1.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512"
+  ],
+  "logs": []
+}

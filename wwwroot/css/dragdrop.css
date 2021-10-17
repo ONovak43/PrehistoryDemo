@@ -1,0 +1,25 @@
+﻿.card {
+    padding: 1em;
+    margin: 1em;
+}
+
+.card-picture {
+    padding: .5em !important;
+}
+
+.left-card {
+    background-color: #AF6500;
+}
+
+.right-card {
+    background-color: #D89E4F;
+}
+
+.card-dragging > * {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card-hidden {
+    display: none;
+}

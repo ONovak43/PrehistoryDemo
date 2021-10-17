@@ -1,0 +1,14 @@
+﻿@page "/winner"
+
+@using PrehistoryMethodApp.Data
+
+<div class="modal-body text-center">
+    <p>Výborně. Všechny tvé odpovědi jsou správné.</p>
+    <p>Heslo tohoto stanoviště je <b>@SecretWord</b>.</p>
+</div>
+
+
+@code {
+    [Parameter] public string SecretWord { get; set; }
+
+}
