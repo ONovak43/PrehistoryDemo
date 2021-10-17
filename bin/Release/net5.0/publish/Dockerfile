@@ -3,4 +3,4 @@
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 COPY . .
-CMD ASPNETCORE_URLS=http://*:$PORT PrehistoryMethodApp.dll
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet PrehistoryMethodApp.dll
