@@ -1,4 +1,4 @@
-using Blazored.Modal;
+﻿using Blazored.Modal;
 using Blazored.Modal.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;

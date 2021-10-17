@@ -1,32 +1,32 @@
-namespace PrehistoryMethodApp.Data
+ï»¿namespace PrehistoryMethodApp.Data
 {
     public class TasksDataService
     {
         private static readonly Card[] taskOne = new[]
         {
-            new Card {FirstWord = "mamut", SecondWord ="Pøedmostí u Pøerova", Advices = "Zkuste se zamyslet, kudy mamuti putovali na našem území.", WrongAnswer = "Bohužel jste pojem pøiøadili špatnì. Mamuti u nás putovali pøes Pøedmostí u Pøerova."},
-            new Card {FirstWord = "èlovìk vzpøímený (Homo erectus)", SecondWord ="oheò", Advices = "Èlovìku vzpøímenému se také pøezdívá Prometheus lidstva. Pokud nìkdo z Vás èetl Staré øecké báje a povìsti, možná Vám díky tomu napoví.", WrongAnswer = "Bohužel jste pojem pøiøadili špatnì. Èlovìk vzpøímený byl náš první pøedek, který zaèal používat oheò."},
-            new Card {FirstWord = "pterodactylus", SecondWord ="ptakoještìr", Advices = "Možná Vám napoví, že pterodactylus znamená \"køídelní prst\".", WrongAnswer = "Bohužel jste pojem pøiøadili špatnì. Pterodactylus byl ptakoještìr. Rozpìtí jeho køídel mohlo být i pøes dva metry."},
-            new Card {FirstWord = "øecký název pro starší dobu kamennou", SecondWord ="paleolit", Advices = "Velkou nápovìdou pro Vás je, že øecky se starý øekne \"palaios\" a kámen \"lithios\".", WrongAnswer = "Bohužel jste pojem pøiøadili špatnì. Starší dobu kamennou oznaèujeme øecky jako paleolit."},
-            new Card {FirstWord = "nejvìtší nalezené oppidum v Èechách", SecondWord ="Závist", Advices = "Tady by se Vám hodil nìkdo, kdo zná aspoò trochu Bibli. Toto oppidum se totiž nazývá jako jeden ze smrtelných høíchù.", WrongAnswer = "Bohužel jste pojem pøiøadili špatnì. Naším nejvìtším oppidem je Závist (nachází se kousek od Prahy)."},
-            new Card {FirstWord = "germánský bùh", SecondWord ="Ódin", Advices = "Vidìli jste nìkterý film od Marvelu (tøeba Thor)? Pokud ano, tak Vám odpovìï musí být jasná.", WrongAnswer = "Bohužel jste pojem pøiøadili špatnì. Hlavním germánským bohem byl Ódin, jeho jiná jména jsou jsou napøíklad Woden èi Wotan."},
+            new Card {FirstWord = "mamut", SecondWord ="PÅ™edmostÃ­ u PÅ™erova", Advices = "Zkuste se zamyslet, kudy mamuti putovali na naÅ¡em ÃºzemÃ­.", WrongAnswer = "BohuÅ¾el jste pojem pÅ™iÅ™adili Å¡patnÄ›. Mamuti u nÃ¡s putovali pÅ™es PÅ™edmostÃ­ u PÅ™erova."},
+            new Card {FirstWord = "ÄlovÄ›k vzpÅ™Ã­menÃ½ (Homo erectus)", SecondWord ="oheÅˆ", Advices = "ÄŒlovÄ›ku vzpÅ™Ã­menÃ©mu se takÃ© pÅ™ezdÃ­vÃ¡ Prometheus lidstva. Pokud nÄ›kdo z VÃ¡s Äetl StarÃ© Å™eckÃ© bÃ¡je a povÄ›sti, moÅ¾nÃ¡ VÃ¡m dÃ­ky tomu napovÃ­.", WrongAnswer = "BohuÅ¾el jste pojem pÅ™iÅ™adili Å¡patnÄ›. ÄŒlovÄ›k vzpÅ™Ã­menÃ½ byl nÃ¡Å¡ prvnÃ­ pÅ™edek, kterÃ½ zaÄal pouÅ¾Ã­vat oheÅˆ."},
+            new Card {FirstWord = "pterodactylus", SecondWord ="ptakojeÅ¡tÄ›r", Advices = "MoÅ¾nÃ¡ VÃ¡m napovÃ­, Å¾e pterodactylus znamenÃ¡ \"kÅ™Ã­delnÃ­ prst\".", WrongAnswer = "BohuÅ¾el jste pojem pÅ™iÅ™adili Å¡patnÄ›. Pterodactylus byl ptakojeÅ¡tÄ›r. RozpÄ›tÃ­ jeho kÅ™Ã­del mohlo bÃ½t i pÅ™es dva metry."},
+            new Card {FirstWord = "Å™eckÃ½ nÃ¡zev pro starÅ¡Ã­ dobu kamennou", SecondWord ="paleolit", Advices = "Velkou nÃ¡povÄ›dou pro VÃ¡s je, Å¾e Å™ecky se starÃ½ Å™ekne \"palaios\" a kÃ¡men \"lithios\".", WrongAnswer = "BohuÅ¾el jste pojem pÅ™iÅ™adili Å¡patnÄ›. StarÅ¡Ã­ dobu kamennou oznaÄujeme Å™ecky jako paleolit."},
+            new Card {FirstWord = "nejvÄ›tÅ¡Ã­ nalezenÃ© oppidum v ÄŒechÃ¡ch", SecondWord ="ZÃ¡vist", Advices = "Tady by se VÃ¡m hodil nÄ›kdo, kdo znÃ¡ aspoÅˆ trochu Bibli. Toto oppidum se totiÅ¾ nazÃ½vÃ¡ jako jeden ze smrtelnÃ½ch hÅ™Ã­chÅ¯.", WrongAnswer = "BohuÅ¾el jste pojem pÅ™iÅ™adili Å¡patnÄ›. NaÅ¡Ã­m nejvÄ›tÅ¡Ã­m oppidem je ZÃ¡vist (nachÃ¡zÃ­ se kousek od Prahy)."},
+            new Card {FirstWord = "germÃ¡nskÃ½ bÅ¯h", SecondWord ="Ã“din", Advices = "VidÄ›li jste nÄ›kterÃ½ film od Marvelu (tÅ™eba Thor)? Pokud ano, tak VÃ¡m odpovÄ›Ä musÃ­ bÃ½t jasnÃ¡.", WrongAnswer = "BohuÅ¾el jste pojem pÅ™iÅ™adili Å¡patnÄ›. HlavnÃ­m germÃ¡nskÃ½m bohem byl Ã“din, jeho jinÃ¡ jmÃ©na jsou jsou napÅ™Ã­klad Woden Äi Wotan."},
         };
 
         private static readonly Card[] taskTwo = new[]
         {
-            new Card {FirstWord = "Albis (bílá øeka)", SecondWord ="Labe", Advices = "Souèasné názvy jsou tìm keltským velmi podobné. Zkuste si všechna slova pøeèíst poøádnì.", WrongAnswer = "Bohužel jste pojem pøiøadili špatnì. Albis je øeka Labe."},
-            new Card {FirstWord = "Vultava (divoká øeka)", SecondWord ="Vltava", Advices = "Souèasné názvy jsou tìm keltským velmi podobné.", WrongAnswer = "Bohužel jste pojem pøiøadili špatnì. Vultava je øeka Vltava, nejdelší øeka u nás."},
-            new Card {FirstWord = "Agara (øeka, která má rychlý tok)", SecondWord ="Ohøe", Advices = "Souèasné názvy jsou tìm keltským velmi podobné.", WrongAnswer = "Bohužel jste pojem pøiøadili špatnì. Agara je øeka Ohøe."},
-            new Card {FirstWord = "Isara (bystrá øeka)", SecondWord ="Jizera", Advices = "Souèasné názvy jsou tìm keltským velmi podobné.", WrongAnswer = "Bohužel jste pojem pøiøadili špatnì. Isara je øeka Jizera."},
+            new Card {FirstWord = "Albis (bÃ­lÃ¡ Å™eka)", SecondWord ="Labe", Advices = "SouÄasnÃ© nÃ¡zvy jsou tÄ›m keltskÃ½m velmi podobnÃ©. Zkuste si vÅ¡echna slova pÅ™eÄÃ­st poÅ™Ã¡dnÄ›.", WrongAnswer = "BohuÅ¾el jste pojem pÅ™iÅ™adili Å¡patnÄ›. Albis je Å™eka Labe."},
+            new Card {FirstWord = "Vultava (divokÃ¡ Å™eka)", SecondWord ="Vltava", Advices = "SouÄasnÃ© nÃ¡zvy jsou tÄ›m keltskÃ½m velmi podobnÃ©.", WrongAnswer = "BohuÅ¾el jste pojem pÅ™iÅ™adili Å¡patnÄ›. Vultava je Å™eka Vltava, nejdelÅ¡Ã­ Å™eka u nÃ¡s."},
+            new Card {FirstWord = "Agara (Å™eka, kterÃ¡ mÃ¡ rychlÃ½ tok)", SecondWord ="OhÅ™e", Advices = "SouÄasnÃ© nÃ¡zvy jsou tÄ›m keltskÃ½m velmi podobnÃ©.", WrongAnswer = "BohuÅ¾el jste pojem pÅ™iÅ™adili Å¡patnÄ›. Agara je Å™eka OhÅ™e."},
+            new Card {FirstWord = "Isara (bystrÃ¡ Å™eka)", SecondWord ="Jizera", Advices = "SouÄasnÃ© nÃ¡zvy jsou tÄ›m keltskÃ½m velmi podobnÃ©.", WrongAnswer = "BohuÅ¾el jste pojem pÅ™iÅ™adili Å¡patnÄ›. Isara je Å™eka Jizera."},
         };
 
         private static readonly Card[] taskThree = new[]
 {
-            new Card {FirstWord = "Tyranosaurus rex", SecondWord ="trex.jpg", Advices = "Takhle TYRANOSAURUS REX nevypadá.", WrongAnswer = "Bohužel jste pojem pøiøadili špatnì.", IsImage = true},
-            new Card {FirstWord = "Triceratops ", SecondWord ="triceratops.jpg", Advices = "Takhle TRICERATOPS nevypadá.", WrongAnswer = "Bohužel jste pojem pøiøadili špatnì.", IsImage = true},
-            new Card {FirstWord = "Stegosaurus", SecondWord ="stegosaurus.jpg", Advices = "Takhle STEGOSAURUS nevypadá.", WrongAnswer = "Bohužel jste pojem pøiøadili špatnì.", IsImage = true},
-            new Card {FirstWord = "Velociraptor", SecondWord ="velociraptor.jpg", Advices = "Takhle VELOCIRAPTOR nevypadá.", WrongAnswer = "Bohužel jste pojem pøiøadili špatnì.", IsImage = true},
-            new Card {FirstWord = "Iguanodon", SecondWord ="iguanodon.jpg", Advices = "Takhle IGUANODON nevypadá.", WrongAnswer = "Bohužel jste pojem pøiøadili špatnì.", IsImage = true},
+            new Card {FirstWord = "Tyranosaurus rex", SecondWord ="trex.jpg", Advices = "Takhle TYRANOSAURUS REX nevypadÃ¡.", WrongAnswer = "BohuÅ¾el jste pojem pÅ™iÅ™adili Å¡patnÄ›.", IsImage = true},
+            new Card {FirstWord = "Triceratops ", SecondWord ="triceratops.jpg", Advices = "Takhle TRICERATOPS nevypadÃ¡.", WrongAnswer = "BohuÅ¾el jste pojem pÅ™iÅ™adili Å¡patnÄ›.", IsImage = true},
+            new Card {FirstWord = "Stegosaurus", SecondWord ="stegosaurus.jpg", Advices = "Takhle STEGOSAURUS nevypadÃ¡.", WrongAnswer = "BohuÅ¾el jste pojem pÅ™iÅ™adili Å¡patnÄ›.", IsImage = true},
+            new Card {FirstWord = "Velociraptor", SecondWord ="velociraptor.jpg", Advices = "Takhle VELOCIRAPTOR nevypadÃ¡.", WrongAnswer = "BohuÅ¾el jste pojem pÅ™iÅ™adili Å¡patnÄ›.", IsImage = true},
+            new Card {FirstWord = "Iguanodon", SecondWord ="iguanodon.jpg", Advices = "Takhle IGUANODON nevypadÃ¡.", WrongAnswer = "BohuÅ¾el jste pojem pÅ™iÅ™adili Å¡patnÄ›.", IsImage = true},
         };
 
         public static Card[] TaskOne { get => taskOne; }

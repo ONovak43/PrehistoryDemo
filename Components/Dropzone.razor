@@ -1,4 +1,4 @@
-@using PrehistoryMethodApp.Data
+﻿@using PrehistoryMethodApp.Data
 @inject DragDropService<Card> DragDrop
 
 @implements IDisposable
@@ -11,7 +11,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-sm" ondragstart="event.dataTransfer.setData('text', event.target.id);">
+    <div class="col" ondragstart="event.dataTransfer.setData('text', event.target.id);">
         @foreach (var card in Cards)
         {
             <div draggable="true"
@@ -24,7 +24,7 @@
             </div>
         }
     </div>
-    <div class="col-sm">
+    <div class="col">
         @foreach (var card in CardsTwo)
         {
         <div class="@GetDropItemClasses(card)"
