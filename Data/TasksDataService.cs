@@ -428,7 +428,7 @@ namespace PrehistoryMethodApp.Data
                 new State()
                 {
                     Headline = "Jak šla období po sobě",
-                    Text = "Úkolem v tomto stanovišti je seřadit jednotlivá období od nejmladšího po nejstarší (vzestupně).<br> Přesouvejte (přidržte na pojmu prst a pak posuňte) názvy jednotlivých období na příslušné pořadí (box s čílem).<br> Postupujte ale opatrně! Pokud uděláte <b>JEDNU</b> chybu, záhadu tohoto stanoviště nerozluštíte."
+                    Text = "Úkolem v tomto stanovišti je seřadit jednotlivá období od nejmladšího po nejstarší (1 bude nejmladší období, 8 bude nejstarší období).<br> Přesouvejte (přidržte na pojmu prst a pak posuňte) názvy jednotlivých období na příslušné pořadí (box s čílem).<br> Postupujte ale opatrně! Pokud uděláte <b>JEDNU</b> chybu, záhadu tohoto stanoviště nerozluštíte."
                 }
             },
             {
