@@ -288,7 +288,7 @@ namespace PrehistoryMethodApp.Data
                 new State()
                 {
                     Headline = "Poznáváme dinosaury",
-                    Text = "Dinosauři vyhynuli již před 65 miliony let. Úkolem v tomto stanovišti je spojit názvy druhů dinosaurů (levý sloupec) s jejich ilustracemi (pravý sloupec).<br> Postupujte velmi opatrně! Na tomto stanovišti nesmíte udělat <b>ŽÁDNOU</b> chybu, aby se Vám podařilo jeho záhadu rozluštit."
+                    Text = "Dinosauři vyhynuli již před 65 miliony let. Úkolem v tomto stanovišti je spojit názvy druhů dinosaurů (levý sloupec) s jejich ilustracemi (pravý sloupec).<br> Přesouvejte názvy (přidržte na něm prst a přesuňte) z levého sloupce Postupujte velmi opatrně! Na tomto stanovišti nesmíte udělat <b>ŽÁDNOU</b> chybu, aby se Vám podařilo jeho záhadu rozluštit."
                 }
             },
             {
