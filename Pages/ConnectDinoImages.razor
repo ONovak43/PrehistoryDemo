@@ -1,13 +1,13 @@
-﻿@page "/druhy"
+﻿@page "/iguanodon"
 
 <div class="container" id="main-box">
     <Dropzone Cards="Cards"
-              DefaultState="@TasksDataService.TaskTwoState["default"]"
-              SuccessfulState="@TasksDataService.TaskTwoState["success"]"
-              FailState="@TasksDataService.TaskTwoState["fail"]" 
+              DefaultState="@TasksDataService.TaskThreeState["default"]"
+              SuccessfulState="@TasksDataService.TaskThreeState["success"]"
+              FailState="@TasksDataService.TaskThreeState["fail"]"
               LeftColor="@LeftColor"
               RightColor="@RightColor"
-              Max_Mistakes="1">
+              Max_Mistakes="0">
     </Dropzone>
 </div>
 
@@ -18,7 +18,7 @@
 
     protected override void OnInitialized()
     {
-        var words = TasksDataService.TaskTwo;
+        var words = TasksDataService.TaskThree;
         Cards = words.ToList();
     }
 }

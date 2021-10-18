@@ -117,8 +117,8 @@ using PrehistoryMethodApp.Components;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/druhy")]
-    public partial class Druhy : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/homoerectus")]
+    public partial class ConnectWords : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -126,21 +126,24 @@ using PrehistoryMethodApp.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 14 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\Druhy.razor"
+#line 18 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\ConnectWords.razor"
        
     private List<Card> Cards = new List<Card>();
-    private string LeftColor = "#31a8d4";
-    private string RightColor = "#0e6382";
+    private string LeftColor = "#D89E4F";
+    private string RightColor = "#AF6500";
 
     protected override void OnInitialized()
     {
-        var words = TasksDataService.TaskTwo;
+        var words = TasksDataService.TaskOne;
         Cards = words.ToList();
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JS { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IModalService modal { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private TasksDataService TasksService { get; set; }
     }
 }
 #pragma warning restore 1591

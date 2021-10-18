@@ -117,8 +117,8 @@ using PrehistoryMethodApp.Components;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/dlouhydum")]
-    public partial class OrderChronological : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/iguanodon")]
+    public partial class ConnectDinoImages : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -126,112 +126,16 @@ using PrehistoryMethodApp.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 54 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\OrderChronological.razor"
+#line 14 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\ConnectDinoImages.razor"
        
-    [CascadingParameter] public IModalService Modal { get; set; }
-
-    private List<Card> Cards;
-    private List<Card> ShuffleCards;
-    private State State = new();
-    private State DefaultState;
-    private State SuccessState;
-    private State FailState;
-    private Card activeItem;
-    private Card lastActiveItem;
-    private const int MAX_MISTAKES = 1;
-    private Dictionary<int, Card> PlacedCards = new();
-    private bool failure = false;
-    private int mistakes = 0;
+    private List<Card> Cards = new List<Card>();
+    private string LeftColor = "#31a8d4";
+    private string RightColor = "#0e6382";
 
     protected override void OnInitialized()
     {
-        var words = TasksDataService.TaskEight;
+        var words = TasksDataService.TaskThree;
         Cards = words.ToList();
-        ShuffleCards = Cards.ToList().OrderBy(x => Guid.NewGuid()).ToList();
-        DefaultState = TasksDataService.TaskEightState["default"];
-        SuccessState = TasksDataService.TaskEightState["success"];
-        FailState = TasksDataService.TaskEightState["fail"];
-        State = DefaultState;
-    }
-
-    public void OnDragStart(Card card, DragEventArgs dragEventArgs)
-    {
-        lastActiveItem = activeItem = card;
-        dragEventArgs.DataTransfer.EffectAllowed = "move";
-    }
-
-    public void OnDragEnd(Card card)
-    {
-        if (card is null)
-        {
-            throw new ArgumentNullException(nameof(card));
-        }
-
-        lastActiveItem = activeItem;
-        activeItem = default(Card);
-    }
-
-    public void OnDrop(int position)
-    {
-        PlacedCards[position] = lastActiveItem;
-    }
-
-    private void Check()
-    {
-        var param = new ModalParameters();
-
-        if (PlacedCards.Count != Cards.Count)
-        {
-            param.Add("Advices", "Musíte seřadit všechna období.");
-            Modal.Show<Advice>("Přesuňte všechna období!", param);
-            return;
-        }
-        for(var i = 0; i < Cards.Count; i++)
-        {
-            if(PlacedCards[i].Equals(Cards[i]))
-            {
-                State = SuccessState;
-                HideAll();
-            }
-            else
-            {
-                if (MAX_MISTAKES <= mistakes)
-                {
-                    State = FailState;
-                    HideAll();
-                }
-                else
-                {
-                    param.Add("Advices", "Takhle po sobě jednotlivá období nenásledují, použijte tlačítko \"Reset\" a zkuste to znova.");
-                    Modal.Show<Advice>("Špatně seřazeno, zbývá Vám ještě jeden pokus", param);
-                    mistakes++;
-                }
-                return;
-            }
-        }
-
-    }
-
-    private string GetGameClasses() => CheckIfGameIsHidden() ? "card-hidden " : "";
-
-    private bool CheckIfGameIsHidden() => failure;
-    private bool CheckIfItemIsActive(Card card) => card.Equals(activeItem);
-
-    private string GetItemClasses(Card card)
-    {
-        var output = "";
-        output += CheckIfItemIsActive(card) ? "card-dragging " : "";
-        return output;
-    }
-
-    private void Reset()
-    {
-        PlacedCards = new();
-    }
-
-    private void HideAll()
-    {
-        failure = true;
     }
 
 #line default

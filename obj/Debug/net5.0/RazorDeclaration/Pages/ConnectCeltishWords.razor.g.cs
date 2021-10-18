@@ -117,8 +117,8 @@ using PrehistoryMethodApp.Components;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/treti")]
-    public partial class Treti : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/keltove")]
+    public partial class ConnectCeltishWords : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -126,7 +126,7 @@ using PrehistoryMethodApp.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 14 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\Treti.razor"
+#line 14 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\ConnectCeltishWords.razor"
        
     private List<Card> Cards = new List<Card>();
     private string LeftColor = "#31a8d4";
@@ -134,7 +134,7 @@ using PrehistoryMethodApp.Components;
 
     protected override void OnInitialized()
     {
-        var words = TasksDataService.TaskThree;
+        var words = TasksDataService.TaskTwo;
         Cards = words.ToList();
     }
 
