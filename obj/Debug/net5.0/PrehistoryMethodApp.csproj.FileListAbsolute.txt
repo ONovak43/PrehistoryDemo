@@ -77,3 +77,7 @@ C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\Razor\Pages\Con
 C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\Razor\Pages\ConnectDinoImages.razor.g.cs
 C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\Razor\Pages\ConnectWords.razor.g.cs
 C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\Razor\Pages\QuestionChoice.razor.g.cs
+C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\RazorDeclaration\Pages\Varianta2.razor.g.cs
+C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\Razor\Pages\Varianta2.razor.g.cs
+C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\RazorDeclaration\Pages\Caesar.razor.g.cs
+C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\Razor\Pages\Caesar.razor.g.cs

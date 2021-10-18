@@ -240,7 +240,7 @@ namespace PrehistoryMethodApp.Data
                 new State()
                 {
                     Headline = "Vyřešili jste záhadu stanoviště. Gratulujeme!",
-                    Text = "Zapiště si písmeno <b>U</b> a pokračujte prosím na další stanoviště."
+                    Text = "Zapiště si písmeno <b>CT</b> a pokračujte prosím na další stanoviště."
                 }
             },
             {
@@ -268,7 +268,7 @@ namespace PrehistoryMethodApp.Data
                 new State()
                 {
                     Headline = "Vyřešili jste záhadu stanoviště. Gratulujeme!",
-                    Text = "Zapiště si písmeno <b>T</b> a pokračujte prosím na další stanoviště."
+                    Text = "Zapiště si písmeno <b>GM</b> a pokračujte prosím na další stanoviště."
                 }
             },
             {
@@ -296,7 +296,7 @@ namespace PrehistoryMethodApp.Data
                 new State()
                 {
                     Headline = "Vyřešili jste záhadu stanoviště. Gratulujeme!",
-                    Text = "Zapiště si písmeno <b>C</b> a pokračujte prosím na další stanoviště."
+                    Text = "Zapiště si písmeno <b>GM</b> a pokračujte prosím na další stanoviště."
                 }
             },
             {
@@ -324,7 +324,7 @@ namespace PrehistoryMethodApp.Data
                 new State()
                 {
                     Headline = "Vyřešili jste záhadu stanoviště. Gratulujeme!",
-                    Text = "Zapiště si písmeno <b>Q</b> a pokračujte prosím na další stanoviště."
+                    Text = "Zapiště si písmeno <b>QX</b> a pokračujte prosím na další stanoviště."
                 }
             },
             {
@@ -352,7 +352,7 @@ namespace PrehistoryMethodApp.Data
                 new State()
                 {
                     Headline = "Vyřešili jste záhadu stanoviště. Gratulujeme!",
-                    Text = "Zapiště si písmeno <b>X</b> a pokračujte prosím na další stanoviště."
+                    Text = "Zapiště si písmeno <b>QX</b> a pokračujte prosím na další stanoviště."
                 }
             },
             {
@@ -380,7 +380,7 @@ namespace PrehistoryMethodApp.Data
                 new State()
                 {
                     Headline = "Vyřešili jste záhadu stanoviště. Gratulujeme!",
-                    Text = "Zapiště si písmeno <b>X</b> a pokračujte prosím na další stanoviště."
+                    Text = "Zapiště si písmeno <b>UV</b> a pokračujte prosím na další stanoviště."
                 }
             },
             {
@@ -408,7 +408,7 @@ namespace PrehistoryMethodApp.Data
                 new State()
                 {
                     Headline = "Vyřešili jste záhadu stanoviště. Gratulujeme!",
-                    Text = "Zapiště si písmeno <b>G</b> a pokračujte prosím na další stanoviště."
+                    Text = "Zapiště si písmeno <b>UV</b> a pokračujte prosím na další stanoviště."
                 }
             },
             {
@@ -436,7 +436,7 @@ namespace PrehistoryMethodApp.Data
                 new State()
                 {
                     Headline = "Vyřešili jste záhadu stanoviště. Gratulujeme!",
-                    Text = "Zapiště si písmeno <b>M</b> a pokračujte prosím na další stanoviště."
+                    Text = "Zapiště si písmeno <b>CT</b> a pokračujte prosím na další stanoviště."
                 }
             },
             {

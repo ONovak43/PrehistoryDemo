@@ -117,7 +117,7 @@ using PrehistoryMethodApp.Components;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/dlouhydum")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/ddum")]
     public partial class OrderChronological : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
