@@ -72,3 +72,4 @@ C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\RazorDeclaratio
 C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\Razor\Shared\ConfirmBox.razor.g.cs
 C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\RazorDeclaration\Pages\OrderChronological.razor.g.cs
 C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\Razor\Pages\OrderChronological.razor.g.cs
+C:\Users\onova\source\repos\PrehistoryMethodApp\bin\Debug\net5.0\QRCoder.dll

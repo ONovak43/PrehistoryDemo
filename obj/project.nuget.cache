@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3HHGD/dMuLgx56zJFRuZovAgr8XX/yJH2LK9fDPMU5YZko7kJj7HYeca/s59DK0DPfbVbCKSK9umKxJunapNYw==",
+  "dgSpecHash": "EL/sHZeugB8UEra2C2aooPkUQnSizrGlQZ6gRj9xhunWOukpfQX0f74L7YGvzDFxPJCZIbWSrw0N4i+R4TYx3w==",
   "success": true,
   "projectFilePath": "C:\\Users\\onova\\source\\repos\\PrehistoryMethodApp\\PrehistoryMethodApp.csproj",
   "expectedPackageFiles": [
@@ -18,7 +18,11 @@
     "C:\\Users\\onova\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.6\\microsoft.extensions.primitives.3.1.6.nupkg.sha512",
     "C:\\Users\\onova\\.nuget\\packages\\microsoft.jsinterop\\3.1.6\\microsoft.jsinterop.3.1.6.nupkg.sha512",
     "C:\\Users\\onova\\.nuget\\packages\\microsoft.jsinterop.webassembly\\3.2.1\\microsoft.jsinterop.webassembly.3.2.1.nupkg.sha512",
-    "C:\\Users\\onova\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512"
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\qrcoder\\1.4.1\\qrcoder.1.4.1.nupkg.sha512",
+    "C:\\Users\\onova\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

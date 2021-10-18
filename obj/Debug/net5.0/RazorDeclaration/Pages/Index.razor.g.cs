@@ -117,7 +117,21 @@ using PrehistoryMethodApp.Components;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/index")]
+#nullable restore
+#line 2 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\Index.razor"
+using QRCoder;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\Index.razor"
+using System.Drawing;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/start")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -126,19 +140,17 @@ using PrehistoryMethodApp.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 17 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\Index.razor"
-       
-    public string DragState = "waiting...";
-
-    public void OnDragStart(DragEventArgs dragEventArgs)
-    {
-        DragState = "drag started";
-    }
-
-    public void OnDrop(DragEventArgs dragEventArgs)
-    {
-        DragState = "item dropped";
-    }
+#line 7 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\Index.razor"
+            
+     private Bitmap qrImg;
+     protected override void OnInitialized()
+     {
+     QRCodeGenerator qrGenerator=new QRCodeGenerator();
+     QRCodeData qrCodeData=qrGenerator.CreateQrCode("The text which should be encoded.", QRCodeGenerator.ECCLevel.Q);
+     QRCode qrCode=new QRCode(qrCodeData);
+     Bitmap qrCodeImage=qrCode.GetGraphic(20);
+     }
+     
 
 #line default
 #line hidden
