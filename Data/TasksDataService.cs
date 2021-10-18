@@ -145,8 +145,8 @@ namespace PrehistoryMethodApp.Data
                 Text = "Co sem nepatří?",
                 Answers = new() {
                     new Answer {Text = "menhir", RightAnswer = false},
-                    new Answer {Text = "doba bronzová", RightAnswer = true},
-                    new Answer {Text = "Keltové", RightAnswer = false},
+                    new Answer {Text = "doba bronzová", RightAnswer = false},
+                    new Answer {Text = "Keltové", RightAnswer = true},
                     new Answer {Text = "Stonehenge", RightAnswer = false},
                 },
                 Advices = "",
