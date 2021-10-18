@@ -15,36 +15,35 @@
 @{var i = 0;}
 @foreach (var card in TwoCardDecks.FirstCardDeck)
 {
-<div class="row mb-1">
-    <div class="col-sm col-6 m-auto card-col" ondragstart="event.dataTransfer.setData('text', event.target.id);">
-        <div draggable="true"
-             class="@GetItemClasses(card)"
-             @ondragstart="(arg) => OnDragStart(card, arg)"
-             @ondragend="(arg) => OnDragEnd(card)">
-            <div class="e-card text-center text-uppercase font-weight-bold justify-content-center align-items-center ml-auto card" style="background-color: @GetBgColor(card, false); width: @GetWidth(card)">
-                @((MarkupString)card.FirstWord)
+    <div class="row mb-1">
+        <div class="col-sm col-6 m-auto card-col" ondragstart="event.dataTransfer.setData('text', event.target.id);">
+            <div draggable="true"
+                 class="@GetItemClasses(card)"
+                 @ondragstart="(arg) => OnDragStart(card, arg)"
+                 @ondragend="(arg) => OnDragEnd(card)">
+                <div class="e-card text-center text-uppercase font-weight-bold justify-content-center align-items-center ml-auto card" style="background-color: @GetBgColor(card, false); width: @GetWidth(card)">
+                    @((MarkupString)card.FirstWord)
+                </div>
+            </div>
+        </div>
+        <div class="col-sm col-6 m-auto card-col">
+            @{ var secondDeckCard = TwoCardDecks.SecondCardDeck[i];}
+            <div class="@GetDropItemClasses(secondDeckCard)"
+                 @ondragover:preventDefault @ondragover="() => { }"
+                 @ondrop="() => OnDrop(secondDeckCard)">
+                @if (secondDeckCard.IsImage)
+                {
+                    <img src="images/@secondDeckCard.SecondWord" style="width: 30% " class="img-fluid rounded mr-auto" />
+                }
+                else
+                {
+                    <div class="e-card card text-center text-uppercase font-weight-bold justify-content-center align-items-center"
+                         style="background-color: @GetBgColor(secondDeckCard);">
+                        @secondDeckCard.SecondWord
+                    </div>
+                }
             </div>
         </div>
     </div>
-    <div class="col-sm col-6 m-auto card-col">
-         @{ var secondDeckCard=TwoCardDecks.SecondCardDeck[i];}
-        <div class="@GetDropItemClasses(secondDeckCard)"
-                @ondragover:preventDefault @ondragover="() => { }"
-                @ondrop="() => OnDrop(secondDeckCard)">
-            @if (secondDeckCard.IsImage)
-            {
-                <img src="images/@secondDeckCard.SecondWord" style="width: 30% " class="img-fluid rounded mr-auto" />
-            }
-            else
-            {
-                <div class="e-card card text-center text-uppercase font-weight-bold justify-content-center align-items-center"
-                        style="background-color: @GetBgColor(secondDeckCard);">
-                    @secondDeckCard.SecondWord
-                </div>
-            }
-        </div>
-    </div>
-</div>
     i++;
 }
-

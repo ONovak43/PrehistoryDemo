@@ -9,11 +9,12 @@
   <ItemGroup>
     <PackageReference Include="Blazored.Modal" Version="6.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
-    <PackageReference Include="QRCoder" Version="1.4.1" />
+    <PackageReference Include="Syncfusion.Blazor.BarcodeGenerator" Version="19.3.0.45" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\images\without_qr\" />
+    <Folder Include="wwwroot\images\qr\" />
   </ItemGroup>
 
 </Project>

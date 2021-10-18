@@ -72,4 +72,8 @@ C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\RazorDeclaratio
 C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\Razor\Shared\ConfirmBox.razor.g.cs
 C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\RazorDeclaration\Pages\OrderChronological.razor.g.cs
 C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\Razor\Pages\OrderChronological.razor.g.cs
-C:\Users\onova\source\repos\PrehistoryMethodApp\bin\Debug\net5.0\QRCoder.dll
+C:\Users\onova\source\repos\PrehistoryMethodApp\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\onova\source\repos\PrehistoryMethodApp\bin\Debug\net5.0\Syncfusion.Blazor.BarcodeGenerator.dll
+C:\Users\onova\source\repos\PrehistoryMethodApp\bin\Debug\net5.0\Syncfusion.Blazor.Core.dll
+C:\Users\onova\source\repos\PrehistoryMethodApp\bin\Debug\net5.0\Syncfusion.Blazor.Themes.dll
+C:\Users\onova\source\repos\PrehistoryMethodApp\bin\Debug\net5.0\Syncfusion.Licensing.dll

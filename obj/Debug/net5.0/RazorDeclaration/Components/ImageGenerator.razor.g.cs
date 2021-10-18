@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace PrehistoryMethodApp.Pages
+namespace PrehistoryMethodApp.Components
 {
     #line hidden
     using System;
@@ -104,27 +104,27 @@ using Blazored.Modal.Services;
 #line hidden
 #nullable disable
 #nullable restore
-#line 14 "C:\Users\onova\source\repos\PrehistoryMethodApp\_Imports.razor"
-using PrehistoryMethodApp.Data;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 15 "C:\Users\onova\source\repos\PrehistoryMethodApp\_Imports.razor"
 using PrehistoryMethodApp.Components;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
-    public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 1 "C:\Users\onova\source\repos\PrehistoryMethodApp\Components\ImageGenerator.razor"
+using PrehistoryMethodApp.Data;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class ImageGenerator : Microsoft.AspNetCore.Components.ComponentBase, IDisposable
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private DragDropService<Card> DragDrop { get; set; }
     }
 }
 #pragma warning restore 1591

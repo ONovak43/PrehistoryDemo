@@ -1,16 +1,11 @@
-@page "/start"
-@using QRCoder
-@using System.Drawing
+@page "/"
 
-<img src="@qrImg" />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="800px" height="1000px" viewBox="0 0 800 1000">
+    <image href="/images/without_qr/dlouhydum_bezqr.jpg" height="800" width="1000" />
+    <image href="/images/qr/dlouhydum_qr.svg" height="200" width="200" />
+</svg>
 
-     @code {
-     private Bitmap qrImg;
-     protected override void OnInitialized()
-     {
-     QRCodeGenerator qrGenerator=new QRCodeGenerator();
-     QRCodeData qrCodeData=qrGenerator.CreateQrCode("The text which should be encoded.", QRCodeGenerator.ECCLevel.Q);
-     QRCode qrCode=new QRCode(qrCodeData);
-     Bitmap qrCodeImage=qrCode.GetGraphic(20);
-     }
-     }
+@code {
+
+}

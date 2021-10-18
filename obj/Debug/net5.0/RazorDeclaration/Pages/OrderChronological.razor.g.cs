@@ -117,7 +117,7 @@ using PrehistoryMethodApp.Components;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/osmy")]
     public partial class OrderChronological : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

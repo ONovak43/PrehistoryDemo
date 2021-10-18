@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PrehistoryMethodApp.Data;
 using PrehistoryMethodApp.Services;
+using Syncfusion.Blazor;
 
 namespace PrehistoryMethodApp
 {
