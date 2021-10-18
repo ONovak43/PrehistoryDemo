@@ -8,5 +8,6 @@ namespace PrehistoryMethodApp.Data
         public bool IsImage = false;
         public string Advices { get; set; }
         public string WrongAnswer { get; set; }
+        public int Position { get; set; }
     }
 }

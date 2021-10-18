@@ -117,7 +117,7 @@ using PrehistoryMethodApp.Components;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/prvni")]
     public partial class Prvni : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -126,28 +126,11 @@ using PrehistoryMethodApp.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 17 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\Prvni.razor"
+#line 18 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\Prvni.razor"
        
     private List<Card> Cards = new List<Card>();
     private string LeftColor = "#D89E4F";
     private string RightColor = "#AF6500";
-
-    private State DefaultState = new State
-    {
-        Headline = "Vítejte na stanovišti číslo jedna!",
-        Text = "Úkolem v tomto stanovišti je spojit pojmy, které k sobě patří. Postupujte ale opatrně! Pokud uděláte <b>JEDNU</b> chybu, záhadu tohoto stanoviště nerozluštíte."
-    };
-    private State SuccessfulState = new State
-    {
-        Headline = "Vyřešili jste záhadu stanoviště. Gratulujeme!",
-        Text = "Zapiště si písmeno <b>U</b> a pokračujte prosím na další stanoviště."
-    };
-    private State FailState = new State
-    {
-        Headline = "Odpověděli jste 2x špatně.",
-        Text = "Záhadu tohoto stanoviště se Vám nepodařilo rozluštit. Pokračujte prosím na další stanoviště."
-    };
-
 
     protected override void OnInitialized()
     {

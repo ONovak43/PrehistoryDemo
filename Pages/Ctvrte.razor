@@ -1,0 +1,158 @@
+﻿@page "/ctvrty"
+@page "/paty"
+@page "/sesty"
+@page "/sedmy"
+
+@inject NavigationManager NavigationManager
+
+
+<div class="container" id="main-box">
+    <div class="row">
+        <div class="col-lg text-center">
+            <h1>@State.Headline</h1>
+            <p>
+                @((MarkupString)State.Text)
+            </p>
+        </div>
+    </div>
+    @foreach (var question in Questions)
+    {
+        <div class="row mb-1 @GetQuestionClass(question)">
+            <div class="col-12 card p-2" ondragstart="event.dataTransfer.setData('text', event.target.id);" style="background-color: #fff3e0">
+                <div class="font-weight-bold justify-content-center align-items-center text-center mb-2">
+                    <h5>@((MarkupString)question.Text)</h5>
+                </div>
+                <div class="col-sm col-12 m-auto card-col">
+                    @{ var i = 0; }
+                    <div class="row">
+                        @foreach (var ans in question.Answers)
+                        {
+                            <div class="col-6 mb-1">
+                                <div class="text-center card m-auto question-card justify-content-center align-items-center @(TrueFalse == false ? "card-with-ans" : ans.Text == "pravda" ? "card-true" : "card-false")"
+                                     @onclick="() => AnswerClick(question, ans)">
+                                    @ans.Text
+                                </div>
+                            </div>
+                            i++;
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+@code {
+    [CascadingParameter] public IModalService Modal { get; set; }
+
+    private int MAX_MISTAKES = 0;
+
+    private char[] chars = new char[] { 'a', 'b', 'c', 'd' };
+
+    private int mistakes = 0;
+
+    private int RightAns = 0;
+
+    private List<Question> Questions = new();
+    private List<Question> HiddenItems = new();
+    private State State = new();
+    private State DefaultState;
+    private State SuccessState;
+    private State FailState;
+    private bool TrueFalse = false;
+
+    protected override void OnInitialized()
+    {
+        Question[] questions;
+
+        var uri = NavigationManager.Uri;
+
+        if (uri.Contains("/paty"))
+        {
+            questions = TasksDataService.TaskFive;
+            DefaultState = TasksDataService.TaskFiveState["default"];
+            SuccessState = TasksDataService.TaskFiveState["success"];
+            FailState = TasksDataService.TaskFiveState["fail"];
+        }
+        else if (uri.Contains("/sesty"))
+        {
+            questions = TasksDataService.TaskSix;
+            DefaultState = TasksDataService.TaskSixState["default"];
+            SuccessState = TasksDataService.TaskSixState["success"];
+            FailState = TasksDataService.TaskSixState["fail"];
+            MAX_MISTAKES = 1;
+        }
+        else if (uri.Contains("/sedmy"))
+        {
+            questions = TasksDataService.TaskSeven;
+            DefaultState = TasksDataService.TaskSevenState["default"];
+            SuccessState = TasksDataService.TaskSevenState["success"];
+            FailState = TasksDataService.TaskSevenState["fail"];
+            MAX_MISTAKES = 1;
+            TrueFalse = true;
+        }
+        else
+        {
+            questions = TasksDataService.TaskFour;
+            DefaultState = TasksDataService.TaskFourState["default"];
+            SuccessState = TasksDataService.TaskFourState["success"];
+            FailState = TasksDataService.TaskFourState["fail"];
+        }
+
+        Questions = questions.ToList().OrderBy(x => Guid.NewGuid()).ToList();
+
+        State.Headline = DefaultState.Headline;
+        State.Text = DefaultState.Text;
+    }
+
+    private async Task AnswerClick(Question question, Answer answer)
+    {
+        var param = new ModalParameters();
+        var modal = Modal.Show<ConfirmBox>($"Jste si jisti, že chcete zvolit {answer.Text}?");
+
+        var result = await modal.Result;
+
+        if (result.Cancelled)
+            return;
+
+        if (answer.RightAnswer)
+        {
+            HideQuestion(question);
+            RightAns++;
+            if (RightAns == Questions.Count)
+            {
+                State.Headline = SuccessState.Headline;
+                State.Text = SuccessState.Text;
+            }
+            return;
+        }
+        else if (mistakes >= MAX_MISTAKES)
+        {
+            State.Headline = FailState.Headline;
+            State.Text = FailState.Text;
+            HideAll();
+            param.Add(nameof(question.Advices), question.WrongAnswer);
+            Modal.Show<Advice>("Konec, odpověděli jste chybně!", param);
+            return;
+        }
+        mistakes++;
+
+        param.Add(nameof(question.Advices), question.Advices);
+        Modal.Show<Advice>("Chyba!", param);
+    }
+
+    private void HideQuestion(Question question)
+    {
+        HiddenItems.Add(question);
+    }
+
+    private void HideAll()
+    {
+        HiddenItems = Questions;
+    }
+
+    private string GetQuestionClass(Question question) => CheckIfQuestionIsHidden(question) ? "card-hidden " : "";
+
+    private bool CheckIfQuestionIsHidden(Question question) => HiddenItems.Contains(question);
+}

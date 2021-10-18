@@ -2,11 +2,12 @@
 
 <div class="container" id="main-box">
     <Dropzone Cards="Cards"
-              DefaultState="@DefaultState"
-              SuccessfulState="@SuccessfulState"
-              FailState="@FailState"
+              DefaultState="@TasksDataService.TaskThreeState["default"]"
+              SuccessfulState="@TasksDataService.TaskThreeState["success"]"
+              FailState="@TasksDataService.TaskThreeState["fail"]"
               LeftColor="@LeftColor"
-              RightColor="@RightColor">
+              RightColor="@RightColor"
+              Max_Mistakes="0">
     </Dropzone>
 </div>
 
@@ -14,22 +15,6 @@
     private List<Card> Cards = new List<Card>();
     private string LeftColor = "#31a8d4";
     private string RightColor = "#0e6382";
-
-    private State DefaultState = new State
-    {
-        Headline = "Učíme se keltsky",
-        Text = "Z doby Keltů nám zůstalo mnoho zeměpisných názvů. Úkolem v tomto stanovišti je spojit keltské názvy řek (levý sloupec) s názvy českými (pravý sloupec), které k sobě patří. Postupujte ale opatrně! Pokud uděláte <b>JEDNU</b> chybu, záhadu tohoto stanoviště nerozluštíte."
-    };
-    private State SuccessfulState = new State
-    {
-        Headline = "Vyřešili jste záhadu stanoviště. Gratulujeme!",
-        Text = "Zapiště si písmeno <b>T</b> a pokračujte prosím na další stanoviště."
-    };
-    private State FailState = new State
-    {
-        Headline = "Odpověděli jste 2x špatně.",
-        Text = "Záhadu tohoto stanoviště se Vám nepodařilo rozluštit. Pokračujte prosím na další stanoviště."
-    };
 
     protected override void OnInitialized()
     {

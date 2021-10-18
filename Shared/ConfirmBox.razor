@@ -1,0 +1,13 @@
+﻿<div class="modal-body text-center">
+    <button @onclick="Choose" class="btn btn-primary">Zvolit</button>
+    <button @onclick="Cancel"  class="btn btn-outline-danger">Zrušit</button>
+</div>
+
+
+@code {
+
+    [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set; }
+
+    async Task Choose() => await BlazoredModal.CloseAsync(ModalResult.Ok(true));
+    async Task Cancel() => await BlazoredModal.CancelAsync();
+}

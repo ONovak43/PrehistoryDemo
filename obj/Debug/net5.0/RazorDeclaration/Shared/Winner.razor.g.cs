@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace PrehistoryMethodApp.Pages
+namespace PrehistoryMethodApp.Shared
 {
     #line hidden
     using System;
@@ -111,14 +111,13 @@ using PrehistoryMethodApp.Components;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\Advice.razor"
+#line 1 "C:\Users\onova\source\repos\PrehistoryMethodApp\Shared\Winner.razor"
 using PrehistoryMethodApp.Data;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/advice")]
-    public partial class Advice : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Winner : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -126,9 +125,9 @@ using PrehistoryMethodApp.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 10 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\Advice.razor"
+#line 9 "C:\Users\onova\source\repos\PrehistoryMethodApp\Shared\Winner.razor"
        
-    [Parameter] public string Advices { get; set; }
+    [Parameter] public string SecretWord { get; set; }
 
 
 #line default

@@ -1,10 +1,11 @@
-﻿.card {
-    padding: 0.25em;
-    margin: 0.5em;
+﻿.e-card {
+    font-size: 1vw;
+    min-height: 5em;
 }
 
-.card-picture {
-    padding: .5em !important;
+.question-card {
+    min-height: 3.5vw;
+    width: 70%
 }
 
 .left-card {
@@ -22,4 +23,39 @@
 
 .card-hidden {
     display: none;
+}
+
+.card-col {
+    padding: 0.5vw;
+}
+
+.card-with-ans {
+    cursor: pointer;
+    background-color: #e6c693;
+}
+
+.card-with-ans:hover {
+    background-color: #bf9654;
+}
+
+.card-true {
+    cursor: pointer;
+    background-color: #aefaa2;
+}
+
+.card-false {
+    cursor: pointer;
+    background-color: #f79c9c;
+}
+
+.card-true:hover {
+    cursor: pointer;
+    background-color: #99d690;
+}
+
+.card-false:hover {
+    background-color: #f26f6f;
+}
+.res-text {
+    font-size: 1vw;
 }

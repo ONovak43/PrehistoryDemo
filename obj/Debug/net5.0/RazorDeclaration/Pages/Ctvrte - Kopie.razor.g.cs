@@ -117,8 +117,8 @@ using PrehistoryMethodApp.Components;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/treti")]
-    public partial class Treti : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
+    public partial class Ctvrte___Kopie : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -126,17 +126,95 @@ using PrehistoryMethodApp.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 14 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\Treti.razor"
+#line 36 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\Ctvrte - Kopie.razor"
        
-    private List<Card> Cards = new List<Card>();
-    private string LeftColor = "#31a8d4";
-    private string RightColor = "#0e6382";
+    [CascadingParameter] public IModalService Modal { get; set; }
+
+    private const int MAX_MISTAKES = 0;
+
+    private char[] chars = new char[] { 'a', 'b', 'c', 'd' };
+
+    private int mistakes = 0;
+
+    private int RightAns = 0;
+
+    private List<Question> Questions = new();
+    private List<Question> HiddenItems = new();
+    private State State = new();
+
+    private readonly State DefaultState = new()
+    {
+        Headline = "Pojmy z hodin dějepisu",
+        Text = "Úkolem v tomto stanovišti je označit správnou odpověď.<br> Postupujte ale opatrně! Abyste rozluštili záhadu tohoto stanoviště, nesmíte udělat <b>ŽÁDNOU</b> chybu."
+    };
+    private readonly State SuccessfulState = new()
+    {
+        Headline = "Vyřešili jste záhadu stanoviště. Gratulujeme!",
+        Text = "Zapiště si písmeno <b>Q</b> a pokračujte prosím na další stanoviště."
+    };
+    private readonly State FailState = new()
+    {
+        Headline = "Odpověděli jste chybně",
+        Text = "Záhadu tohoto stanoviště se Vám nepodařilo rozluštit. Pokračujte prosím na další stanoviště."
+    };
 
     protected override void OnInitialized()
     {
-        var words = TasksDataService.TaskThree;
-        Cards = words.ToList();
+        var questions = TasksDataService.TaskFour;
+        Questions = questions.ToList().OrderBy(x => Guid.NewGuid()).ToList();
+        State.Headline = DefaultState.Headline;
+        State.Text = DefaultState.Text;
     }
+
+    private async Task AnswerClick(Question question, Answer answer)
+    {
+        var param = new ModalParameters();
+        var modal = Modal.Show<ConfirmBox>($"Jste si jisti, že chcete zvolit {answer.Text}?");
+
+        var result = await modal.Result;
+
+        if (result.Cancelled)
+            return;
+
+        if (answer.RightAnswer)
+        {
+            HideQuestion(question);
+            RightAns++;
+            if(RightAns == Questions.Count)
+            {
+                State.Headline = SuccessfulState.Headline;
+                State.Text = SuccessfulState.Text;
+            }
+            return;
+        }
+        else if (mistakes >= MAX_MISTAKES)
+        {
+            State.Headline = FailState.Headline;
+            State.Text = FailState.Text;
+            HideAll();
+            param.Add(nameof(question.Advices), question.WrongAnswer);
+            Modal.Show<Advice>("Konec, odpověděli jste chybně!", param);
+            return;
+        }
+        mistakes++;
+
+        param.Add(nameof(question.Advices), question.Advices);
+        Modal.Show<Advice>("Chyba!", param);
+    }
+
+    private void HideQuestion(Question question)
+    {
+        HiddenItems.Add(question);
+    }
+
+    private void HideAll()
+    {
+        HiddenItems = Questions;
+    }
+
+    private string GetQuestionClass(Question question) => CheckIfQuestionIsHidden(question) ? "card-hidden " : "";
+
+    private bool CheckIfQuestionIsHidden(Question question) => HiddenItems.Contains(question);
 
 #line default
 #line hidden

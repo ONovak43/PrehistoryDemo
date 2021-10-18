@@ -1,0 +1,160 @@
+﻿@page "/"
+<div class="container" id="main-box">
+    <div class="row">
+        <div class="col-lg text-center">
+            <h1>@State.Headline</h1>
+            <p>
+                @((MarkupString)State.Text)
+            </p>
+        </div>
+    </div>
+    <div class="row @GetGameClasses() ">
+        @for (var i = 0; i < ShuffleCards.Count; i++)
+        {
+            var num = i;
+            <div class="col-3 p-2"
+                 @ondragover:preventDefault @ondragover="() => { }"
+                 @ondrop="() => OnDrop(num)">
+                <div class="font-weight-bold justify-content-center align-items-center text-center card res-text"
+                     style="min-height: 5vw; background-color: #fccb81">
+                    @(i+1).
+                    @if (PlacedCards != null && PlacedCards.ContainsKey(i))
+                    {
+                        @((MarkupString)PlacedCards[i].FirstWord)
+                    }
+                </div>
+            </div>
+        }
+    </div>
+    <div class="row @GetGameClasses()">
+        @foreach (var card in ShuffleCards)
+        {
+            @if (PlacedCards == null || (PlacedCards != null && !PlacedCards.ContainsValue(card)))
+            {
+                <div class="col-3 p-2 @GetItemClasses(card)" ondragstart="event.dataTransfer.setData('text', event.target.id);">
+                    <div class="justify-content-center align-items-center card text-center res-text "
+                         draggable="true"
+                         @ondragstart="(arg) => OnDragStart(card, arg)"
+                         @ondragend="(arg) => OnDragEnd(card)"
+                         style="min-height: 5vw; background-color: #fff3e0">
+                        @((MarkupString)card.FirstWord)
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    <div class="row @GetGameClasses()">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+            <button @onclick="Check" class="btn btn-primary m-2">Ověřit</button>
+            <button @onclick="Reset" class="btn btn-outline-danger m-2">Reset</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    [CascadingParameter] public IModalService Modal { get; set; }
+
+    private List<Card> Cards;
+    private List<Card> ShuffleCards;
+    private State State = new();
+    private State DefaultState;
+    private State SuccessState;
+    private State FailState;
+    private Card activeItem;
+    private Card lastActiveItem;
+    private const int MAX_MISTAKES = 1;
+    private Dictionary<int, Card> PlacedCards = new();
+    private bool failure = false;
+    private int mistakes = 0;
+
+    protected override void OnInitialized()
+    {
+        var words = TasksDataService.TaskEight;
+        Cards = words.ToList();
+        ShuffleCards = Cards.ToList().OrderBy(x => Guid.NewGuid()).ToList();
+        DefaultState = TasksDataService.TaskEightState["default"];
+        SuccessState = TasksDataService.TaskEightState["success"];
+        FailState = TasksDataService.TaskEightState["fail"];
+        State = DefaultState;
+    }
+
+    public void OnDragStart(Card card, DragEventArgs dragEventArgs)
+    {
+        lastActiveItem = activeItem = card;
+        dragEventArgs.DataTransfer.EffectAllowed = "move";
+    }
+
+    public void OnDragEnd(Card card)
+    {
+        if (card is null)
+        {
+            throw new ArgumentNullException(nameof(card));
+        }
+
+        lastActiveItem = activeItem;
+        activeItem = default(Card);
+    }
+
+    public void OnDrop(int position)
+    {
+        PlacedCards[position] = lastActiveItem;
+    }
+
+    private void Check()
+    {
+        var param = new ModalParameters();
+
+        if (PlacedCards.Count != Cards.Count)
+        {
+            param.Add("Advices", "Musíte seřadit všechna období.");
+            Modal.Show<Advice>("Přesuňte všechna období!", param);
+            return;
+        }
+        for(var i = 0; i < Cards.Count; i++)
+        {
+            if(PlacedCards[i].Equals(Cards[i]))
+            {
+                State = SuccessState;
+                HideAll();
+            }
+            else
+            {
+                if (MAX_MISTAKES <= mistakes)
+                {
+                    State = FailState;
+                    HideAll();
+                }
+                else
+                {
+                    param.Add("Advices", "Takhle po sobě jednotlivá období nenásledují, použijte tlačítko \"Reset\" a zkuste to znova.");
+                    Modal.Show<Advice>("Špatně seřazeno, zbývá Vám ještě jeden pokus", param);
+                    mistakes++;
+                }
+                return;
+            }
+        }
+
+    }
+
+    private string GetGameClasses() => CheckIfGameIsHidden() ? "card-hidden " : "";
+
+    private bool CheckIfGameIsHidden() => failure;
+    private bool CheckIfItemIsActive(Card card) => card.Equals(activeItem);
+
+    private string GetItemClasses(Card card)
+    {
+        var output = "";
+        output += CheckIfItemIsActive(card) ? "card-dragging " : "";
+        return output;
+    }
+
+    private void Reset()
+    {
+        PlacedCards = new();
+    }
+
+    private void HideAll()
+    {
+        failure = true;
+    }
+}
