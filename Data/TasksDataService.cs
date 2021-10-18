@@ -232,7 +232,7 @@ namespace PrehistoryMethodApp.Data
                 new State()
                 {
                     Headline = "Pojmy z hodin dějepisu",
-                    Text = "Úkolem v tomto stanovišti je spojit pojmy, které k sobě patří.<br> Postupujte ale opatrně! Pokud uděláte <b>JEDNU</b> chybu, záhadu tohoto stanoviště nerozluštíte."
+                    Text = "Úkolem v tomto stanovišti je spojit pojmy, které k sobě patří.<br> Přesouvejte pojmy (přidržte na něm prst, pak přesuňte) z levého sloupce do pravého.<br> Postupujte ale opatrně! Pokud uděláte <b>JEDNU</b> chybu, záhadu tohoto stanoviště nerozluštíte."
                 }
             },
             {
@@ -428,7 +428,7 @@ namespace PrehistoryMethodApp.Data
                 new State()
                 {
                     Headline = "Jak šla období po sobě",
-                    Text = "Úkolem v tomto stanovišti je seřadit jednotlivá období od nejmladšího po nejstarší (vzestupně).<br> Postupujte ale opatrně! Pokud uděláte <b>JEDNU</b> chybu, záhadu tohoto stanoviště nerozluštíte."
+                    Text = "Úkolem v tomto stanovišti je seřadit jednotlivá období od nejmladšího po nejstarší (vzestupně).<br> Přesouvejte (přidržte na pojmu prst a pak posuňte) názvy jednotlivých období na příslušné pořadí (box s čílem).<br> Postupujte ale opatrně! Pokud uděláte <b>JEDNU</b> chybu, záhadu tohoto stanoviště nerozluštíte."
                 }
             },
             {
