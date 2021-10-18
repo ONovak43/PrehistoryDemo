@@ -116,7 +116,7 @@ namespace PrehistoryMethodApp.Components
         }
 
         private string GetBgColor(Card card, bool isRight = true) => CheckIfItemHasColor(card) ? cardColors[card] : isRight ? RightColor : LeftColor;
-        private string GetWidth(Card card) => card.IsImage ? "45%" : "auto";
+        private string GetWidth(Card card) => card.IsImage ? "75%" : "auto";
         private bool CheckIfItemIsActive(Card card) => card.Equals(activeItem);
 
         private bool CheckIfItemIsHidden(Card card) => hiddenItems.Contains(card);
