@@ -242,6 +242,8 @@ using PrehistoryMethodApp.Components;
     private string GetQuestionClass(Question question) => CheckIfQuestionIsHidden(question) ? "card-hidden " : "";
 
     private bool CheckIfQuestionIsHidden(Question question) => HiddenItems.Contains(question);
+    private string GetBg(Question question) => "background-color: #fff3e0";
+
 
 #line default
 #line hidden

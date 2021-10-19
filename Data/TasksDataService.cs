@@ -54,7 +54,7 @@ namespace PrehistoryMethodApp.Data
                     new Answer {Text = "amulet", RightAnswer = false},
                 },
                 Advices = "",
-                WrongAnswer = ""
+                WrongAnswer = "",
             },
             new Question {
                 Text = "Jak se nazývá období, které následuje po době ledové?",
@@ -150,7 +150,8 @@ namespace PrehistoryMethodApp.Data
                     new Answer {Text = "Stonehenge", RightAnswer = false},
                 },
                 Advices = "",
-                WrongAnswer = ""
+                WrongAnswer = "",
+                Background = "/images/stonehenge.jpg"
             },
             new Question {
                 Text = "Co sem nepatří?",

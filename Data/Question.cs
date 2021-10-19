@@ -12,5 +12,6 @@ namespace PrehistoryMethodApp.Data
         public string Advices { get; set; }
 
         public string WrongAnswer { get; set; }
+        public string? Background { get; set; }
     }
 }
