@@ -81,3 +81,5 @@ C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\RazorDeclaratio
 C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\Razor\Pages\Varianta2.razor.g.cs
 C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\RazorDeclaration\Pages\Caesar.razor.g.cs
 C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\Razor\Pages\Caesar.razor.g.cs
+C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\RazorDeclaration\Pages\Signup.razor.g.cs
+C:\Users\onova\source\repos\PrehistoryMethodApp\obj\Debug\net5.0\Razor\Pages\Signup.razor.g.cs
