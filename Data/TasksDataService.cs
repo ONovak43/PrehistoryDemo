@@ -8,10 +8,7 @@ namespace PrehistoryMethodApp.Data
         {
             new Card {FirstWord = "mamut", SecondWord ="Předmostí u Přerova", Advices = "Zkuste se zamyslet, kudy mamuti putovali na našem území.", WrongAnswer = "Bohužel jste pojem přiřadili špatně. Mamuti u nás putovali přes Předmostí u Přerova."},
             new Card {FirstWord = "člověk vzpřímený<br>(Homo erectus)", SecondWord ="oheň", Advices = "Člověku vzpřímenému se také přezdívá Prometheus lidstva. Pokud někdo z Vás četl Staré řecké báje a pověsti, možná Vám díky tomu napoví.", WrongAnswer = "Bohužel jste pojem přiřadili špatně. Člověk vzpřímený byl náš první předek, který začal používat oheň."},
-            new Card {FirstWord = "pterodactylus", SecondWord ="ptakoještěr", Advices = "Možná Vám napoví, že pterodactylus znamená \"křídelní prst\".", WrongAnswer = "Bohužel jste pojem přiřadili špatně. Pterodactylus byl ptakoještěr. Rozpětí jeho křídel mohlo být i přes dva metry."},
-            new Card {FirstWord = "řecký název pro<br>starší dobu kamennou", SecondWord ="paleolit", Advices = "Velkou nápovědou pro Vás je, že řecky se starý řekne \"palaios\" a kámen \"lithios\".", WrongAnswer = "Bohužel jste pojem přiřadili špatně. Starší dobu kamennou označujeme řecky jako paleolit."},
-            new Card {FirstWord = "největší nalezené<br>oppidum v Čechách", SecondWord ="Závist", Advices = "Tady by se Vám hodil někdo, kdo zná aspoň trochu Bibli. Toto oppidum se totiž nazývá jako jeden ze smrtelných hříchů.", WrongAnswer = "Bohužel jste pojem přiřadili špatně. Naším největším oppidem je Závist (nachází se kousek od Prahy)."},
-            new Card {FirstWord = "germánský bůh", SecondWord ="Ódin", Advices = "Viděli jste některý film od Marvelu (třeba Thor)? Pokud ano, tak Vám odpověď musí být jasná.", WrongAnswer = "Bohužel jste pojem přiřadili špatně. Hlavním germánským bohem byl Ódin, jeho jiná jména jsou jsou například Woden či Wotan."},
+            new Card {FirstWord = "Keltové", SecondWord ="Závist", Advices = "Tady by se Vám hodil někdo, kdo zná aspoň trochu Bibli. Toto oppidum se totiž nazývá jako jeden ze smrtelných hříchů.", WrongAnswer = "Bohužel jste pojem přiřadili špatně. Naším největším oppidem je Závist (nachází se kousek od Prahy)."},
         };
 
         private static readonly Card[] taskTwo = new[]
@@ -26,9 +23,7 @@ namespace PrehistoryMethodApp.Data
         {
             new Card {FirstWord = "Tyranosaurus rex", SecondWord ="trex.jpg", Advices = "Takhle TYRANOSAURUS REX nevypadá.", WrongAnswer = "Bohužel jste pojem přiřadili špatně.", IsImage = true},
             new Card {FirstWord = "Triceratops ", SecondWord ="triceratops.jpg", Advices = "Takhle TRICERATOPS nevypadá.", WrongAnswer = "Bohužel jste pojem přiřadili špatně.", IsImage = true},
-            new Card {FirstWord = "Stegosaurus", SecondWord ="stegosaurus.jpg", Advices = "Takhle STEGOSAURUS nevypadá.", WrongAnswer = "Bohužel jste pojem přiřadili špatně.", IsImage = true},
             new Card {FirstWord = "Velociraptor", SecondWord ="velociraptor.jpg", Advices = "Takhle VELOCIRAPTOR nevypadá.", WrongAnswer = "Bohužel jste pojem přiřadili špatně.", IsImage = true},
-            new Card {FirstWord = "Iguanodon", SecondWord ="iguanodon.jpg", Advices = "Takhle IGUANODON nevypadá.", WrongAnswer = "Bohužel jste pojem přiřadili špatně.", IsImage = true},
         };
 
         private static readonly Card[] taskEight= new[]
@@ -78,17 +73,6 @@ namespace PrehistoryMethodApp.Data
                 Advices = "",
                 WrongAnswer = ""
             },
-            new Question {
-                Text = "V jakém oppidu na našem území fungovala keltská mincovna?",
-                Answers = new() {
-                    new Answer { Text = "Závist", RightAnswer = false },
-                    new Answer { Text = "Třísov", RightAnswer = false },
-                    new Answer { Text = "Stradonice", RightAnswer = true },
-                    new Answer { Text = "České Lhotice", RightAnswer = false },
-                },
-                Advices = "",
-                WrongAnswer = ""
-            },
         };
 
         private static readonly Question[] taskFive = new[]
@@ -116,17 +100,6 @@ namespace PrehistoryMethodApp.Data
                 WrongAnswer = ""
             },
             new Question {
-                Text = "V době bronzové se začal používat ...",
-                Answers = new() {
-                    new Answer { Text = "oštěp", RightAnswer = false },
-                    new Answer { Text = "hovězí dobytek v zemědělství", RightAnswer = false },
-                    new Answer { Text = "rýč", RightAnswer = false },
-                    new Answer { Text = "meč", RightAnswer = true },
-                },
-                Advices = "",
-                WrongAnswer = ""
-            },
-            new Question {
                 Text = "Prvním doloženým předkem člověka, který opustil Afriku byl ...",
                 Answers = new() {
                     new Answer { Text = "člověk vzpřímený (Homo erectus)", RightAnswer = true },
@@ -146,7 +119,7 @@ namespace PrehistoryMethodApp.Data
                 Answers = new() {
                     new Answer {Text = "menhir", RightAnswer = false},
                     new Answer {Text = "doba bronzová", RightAnswer = false},
-                    new Answer {Text = "Keltové", RightAnswer = true},
+                    new Answer {Text = "srstnatý nosorožec", RightAnswer = true},
                     new Answer {Text = "Stonehenge", RightAnswer = false},
                 },
                 Advices = "",
@@ -190,24 +163,6 @@ namespace PrehistoryMethodApp.Data
             },
             new Question {
                 Text = "Germánští kněží se nazývali druidové.",
-                Answers = new() {
-                    new Answer { Text = "pravda", RightAnswer = false },
-                    new Answer { Text = "nepravda", RightAnswer = true },
-                },
-                Advices = "",
-                WrongAnswer = ""
-            },
-            new Question {
-                Text = "Markomanské války probíhaly v době římské.",
-                Answers = new() {
-                    new Answer { Text = "pravda", RightAnswer = true },
-                    new Answer { Text = "nepravda", RightAnswer = false },
-                },
-                Advices = "",
-                WrongAnswer = ""
-            },
-            new Question {
-                Text = "Zemědělství bylo vynalezeno v pozdní době kamenné (eneolitu).",
                 Answers = new() {
                     new Answer { Text = "pravda", RightAnswer = false },
                     new Answer { Text = "nepravda", RightAnswer = true },
