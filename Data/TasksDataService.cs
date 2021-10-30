@@ -55,7 +55,7 @@ namespace PrehistoryMethodApp.Data
                 Text = "Jak se nazývá období, které následuje po době ledové?",
                 Answers = new() {
                     new Answer { Text = "doba meziledová", RightAnswer = true },
-                    new Answer { Text = "doba poledová", RightAnswer = false },
+                    new Answer { Text = "doba horká", RightAnswer = false },
                     new Answer { Text = "doba slunečná", RightAnswer = false },
                     new Answer { Text = "doba oteplování", RightAnswer = false },
                 },
