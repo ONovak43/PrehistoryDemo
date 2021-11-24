@@ -187,7 +187,7 @@ namespace PrehistoryMethodApp.Data
                 "default",
                 new State()
                 {
-                    Headline = "Pojmy z hodin dějepisu",
+                    Headline = "Pravěká spojovačka",
                     Text = "Úkolem v tomto stanovišti je spojit pojmy, které k sobě patří.<br> Přesouvejte pojmy (přidržte na něm prst, pak přesuňte) z levého sloupce do pravého.<br> Postupujte ale opatrně! Pokud uděláte <b>JEDNU</b> chybu, záhadu tohoto stanoviště nerozluštíte."
                 }
             },
@@ -271,7 +271,7 @@ namespace PrehistoryMethodApp.Data
                 "default",
                 new State()
                 {
-                    Headline = "Pojmy z hodin dějepisu",
+                    Headline = "Co je správně?",
                     Text = "Úkolem v tomto stanovišti je označit správnou odpověď.<br> Postupujte ale opatrně! Abyste rozluštili záhadu tohoto stanoviště, nesmíte udělat <b>ŽÁDNOU</b> chybu."
                 }
             },
@@ -299,7 +299,7 @@ namespace PrehistoryMethodApp.Data
                 "default",
                 new State()
                 {
-                    Headline = "Pojmy z hodin dějepisu",
+                    Headline = "Pravěká doplňovačka",
                     Text = "Úkolem v tomto stanovišti je doplnit správně větu.<br> Postupujte ale opatrně! Abyste rozluštili záhadu tohoto stanoviště, nesmíte udělat <b>ŽÁDNOU</b> chybu."
                 }
             },
@@ -327,7 +327,7 @@ namespace PrehistoryMethodApp.Data
                 "default",
                 new State()
                 {
-                    Headline = "Pojmy z hodin dějepisu",
+                    Headline = "Patří, patří, nepatří!",
                     Text = "Úkolem v tomto stanovišti je označit termín, který nepatří mezi ostatní.<br> Postupujte ale opatrně! Pokud uděláte <b>JEDNU</b> chybu, záhadu tohoto stanoviště nerozluštíte."
                 }
             },
@@ -355,7 +355,7 @@ namespace PrehistoryMethodApp.Data
                 "default",
                 new State()
                 {
-                    Headline = "Pojmy z hodin dějepisu",
+                    Headline = "Pravda, nebo lež?",
                     Text = "Úkolem v tomto stanovišti je rozhodnout, zda je věta pravdivá.<br> Postupujte ale opatrně! Pokud uděláte <b>JEDNU</b> chybu, záhadu tohoto stanoviště nerozluštíte."
                 }
             },
@@ -383,8 +383,8 @@ namespace PrehistoryMethodApp.Data
                 "default",
                 new State()
                 {
-                    Headline = "Jak šla období po sobě",
-                    Text = "Úkolem v tomto stanovišti je seřadit jednotlivá období od nejmladšího po nejstarší (1 bude nejmladší období, 8 bude nejstarší období).<br> Přesouvejte (přidržte na pojmu prst a pak posuňte) názvy jednotlivých období na příslušné pořadí (box s čílem).<br> Postupujte ale opatrně! Pokud uděláte <b>JEDNU</b> chybu, záhadu tohoto stanoviště nerozluštíte."
+                    Headline = "Jak to šlo po sobě",
+                    Text = "Úkolem v tomto stanovišti je seřadit jednotlivá období chronologicky (1. bude nejmladší období, 8. bude nejstarší období).<br> Přesouvejte (přidržte na pojmu prst a pak posuňte) názvy jednotlivých období na příslušné pořadí (box s číslem).<br> Postupujte ale opatrně! Pokud uděláte <b>JEDNU</b> chybu, záhadu tohoto stanoviště nerozluštíte."
                 }
             },
             {

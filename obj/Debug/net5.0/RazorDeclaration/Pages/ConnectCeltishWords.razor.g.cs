@@ -129,8 +129,8 @@ using PrehistoryMethodApp.Components;
 #line 14 "C:\Users\onova\source\repos\PrehistoryMethodApp\Pages\ConnectCeltishWords.razor"
        
     private List<Card> Cards = new List<Card>();
-    private string LeftColor = "#31a8d4";
-    private string RightColor = "#0e6382";
+    private string LeftColor = "#c2d9fc";
+    private string RightColor = "#afc1db";
 
     protected override void OnInitialized()
     {

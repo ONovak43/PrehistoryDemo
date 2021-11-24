@@ -117,7 +117,7 @@ using PrehistoryMethodApp.Components;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/signup")]
     public partial class Signup : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
